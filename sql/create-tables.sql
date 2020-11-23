@@ -30,3 +30,7 @@ CREATE TABLE `Attendances` (
     FOREIGN KEY (`memberId`) REFERENCES `Members`(`memberId`),
     FOREIGN KEY (`meetingId`) REFERENCES `Meetings`(`meetingId`)
 );
+CREATE TABLE `Status` (
+    `statusType` VARCHAR(255) NOT NULL,
+    `statusValue` VARCHAR(255) NOT NULL
+);

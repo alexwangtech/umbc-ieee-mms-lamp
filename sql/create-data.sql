@@ -25,3 +25,7 @@ INSERT INTO `Attendances` (memberId, meetingId)
 VALUES (1, 1);
 INSERT INTO `Attendances` (memberId, meetingId)
 VALUES (1, 2);
+
+/* Insert data into the 'Status' table */
+INSERT INTO `Status` (statusType, statusValue)
+VALUES ('MEETING', 'FALSE');

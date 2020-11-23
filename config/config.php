@@ -1,9 +1,9 @@
 <?php
 
 // CONSTANTS FOR SQL CONNECTIVITY
-$HOST = 'localhost';
-$DBNAME = 'ieee_mms';
+$HOSTNAME = 'localhost';
 $USERNAME = 'mms-user';
 $PASSWORD = 'mms-user';
+$DBNAME = 'ieee_mms';
 
 ?>
