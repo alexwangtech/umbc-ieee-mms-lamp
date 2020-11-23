@@ -12,10 +12,10 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="#">Dashboard</a>
+                <a class="nav-link" href="admin-dashboard.php">Dashboard</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Meetings</a>
+                <a class="nav-link" href="admin-meetings.php">Meetings</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Attendance</a>
