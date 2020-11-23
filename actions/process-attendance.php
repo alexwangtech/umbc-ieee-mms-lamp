@@ -5,7 +5,6 @@
 // a submission from the 'index.php' form.
 // *************************************************************************
 
-session_start();
 require_once('../config/config.php');
 
 // Get the form information from the POST array

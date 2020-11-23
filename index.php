@@ -63,7 +63,7 @@ if (isset($_GET['success'])) {
                         if ($emptyValues == TRUE) {
                             echo '
                                 <div class="alert alert-danger" role="alert">
-                                    Missing values from one or more fields.
+                                    Empty values in one or more fields.
                                 </div>';
                         }
                         

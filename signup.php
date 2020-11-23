@@ -1,3 +1,35 @@
+<?php
+
+// Check to see if there's a parameter for empty values
+if (isset($_GET['emptyValues'])) {
+    $emptyValues = $_GET['emptyValues'] == 'true' ? true : false;
+} else {
+    $emptyValues = false;
+}
+
+// Check to see if there's a parameter for password mismatch
+if (isset($_GET['passwordsMismatch'])) {
+    $passwordsMismatch = $_GET['passwordsMismatch'] == 'true' ? true : false;
+} else {
+    $passwordsMismatch = false;
+}
+
+// Check to see if there's a parameter for email used
+if (isset($_GET['emailUsed'])) {
+    $emailUsed = $_GET['emailUsed'] == 'true' ? true : false;
+} else {
+    $emailUsed = false;
+}
+
+// Check to see if there's a parameter for member success
+if (isset($_GET['success'])) {
+    $success = $_GET['success'] == 'true' ? true : false;
+} else {
+    $success = false;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +49,42 @@
                 <div class="d-flex justify-content-center form-margin">
                     <div class="shadow p-3 mb-5 bg-white rounded">
                         <h3 class="text-center">Sign Up</h3>
-                        <form>
+
+                        <?php
+                        // Render an alert if there are blank fields
+                        if ($emptyValues == TRUE) {
+                            echo '
+                                <div class="alert alert-danger" role="alert">
+                                    Empty values in one or more fields.
+                                </div>';
+                        }
+
+                        // Render an alert if passwords do not match
+                        if ($passwordsMismatch == TRUE) {
+                            echo '
+                                <div class="alert alert-danger" role="alert">
+                                    Passwords do not match.
+                                </div>';
+                        }
+
+                        // Render an alert if passwords do not match
+                        if ($emailUsed == TRUE) {
+                            echo '
+                                <div class="alert alert-danger" role="alert">
+                                    Email is already in use.
+                                </div>';
+                        }
+                        
+                        // Render an alert if member creation was successful
+                        if ($success == TRUE) {
+                            echo '
+                                <div class="alert alert-success" role="alert">
+                                    New member created!
+                                </div>';
+                        }
+                        ?>
+
+                        <form action="actions/process-signup.php" method="POST">
                             <div class="form-row">
                                 <div class="form-group col-6">
                                     <label for="firstName">First Name</label>
